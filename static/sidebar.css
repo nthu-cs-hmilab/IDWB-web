@@ -105,7 +105,7 @@
     font-weight:bold;
     padding-top:2vh;
     
-    color:#4A4E69;
+    color:#22223B;
 }
 .des-paragraph {
     text-align: justify;
@@ -388,10 +388,10 @@
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #9A8C98;
+  color: #22223B;
   font-size: 1.5vw;
   padding: .4vw .4vw;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 
