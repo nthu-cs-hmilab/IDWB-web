@@ -4,13 +4,9 @@
 
 The static assets are in the `static` directory. The layout and templates are in the `wiki` directory, and the pages live in the `wiki > pages` directory.
 
-    |__ static/             -> static assets (CSS and JavaScript files only)
-    |__ wiki/               -> Main directory for the pages and layouts
-        |__ footer.html     -> Footer that will appear in all the pages
-        |__ layout.html     -> Main layout of the website. All the pages will follow its structure
-        |__ menu.html       -> Menu that will appear in all the pages
-        |__ pages/          -> Directory for all the pages
-            |__ *.html      -> Actual pages of the website
+    |__ static/         -> static assets (CSS, JavaScript files, and images)
+    |__ pages/          -> Directory for all the pages
+        |__ *.html      -> Actual pages of the website
     |__ .gitignore          -> Tells GitHub which files/directories should not be uploaded to the repository
     |__ .gitlab-ci.yml      -> Automated flow for building, testing and deploying the website.
     |__ README.md           -> File containing the text you are reading right now
