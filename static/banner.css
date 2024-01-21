@@ -1,0 +1,238 @@
+.banner-container {
+    margin:0;
+    padding:0;
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+.banner-word{
+    height:100%;
+    margin:0;
+    padding:0;
+    position:absolute;
+    z-index:100;
+    top:0;
+    left:5%;
+    right:5%;
+    align-items: center;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    
+
+}
+
+.banner-header{
+    padding-top:4%;
+    font-size:8vw;
+    color:white;
+    z-index:100;
+    font-family:  'Montserrat';
+    font-weight:700;
+}
+.banner-para{
+    font-size:2vw;
+    color:white;
+    z-index:100;
+    font-family:  'Montserrat'
+}
+
+
+.banner-attributions {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-collaborations {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/collaboration.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-communication {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/education-banner.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-contribution {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/4.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-description {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/description-banner.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-education {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/6.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-engineering {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/7.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-entrepreneurship {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/entrepreneurship-banner.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-experiments {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/9.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-hardware {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/11.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-human-practices {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/10.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-implementation {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/12.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-improve {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/13.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-inclusivity {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/inclusive-banner.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-measurement {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/15.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-model {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/16.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-notebook {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/17.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-part-collection {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/18.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-partnership {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/partnership-banner.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+
+.banner-parts {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/20.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-plants {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/21.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-proof-of-concept {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/22.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-result-ampc {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/ampc-banner.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-result-mn {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/result-mn.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-safety {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/24.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-software {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/25.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-sustainable {
+    height:100vh;
+    background-image: url(https://static.igem.wiki/teams/4336/wiki/wiki/banner/sustainable.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}
+.banner-spaces {
+    height:100vh;
+    background-image: url(https://i.pinimg.com/564x/22/cf/b0/22cfb0b30ce1ffd3b7023e6103df3465.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    filter:brightness(50%);
+}

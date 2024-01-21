@@ -1,0 +1,148 @@
+@media only screen and (max-width: 1000px) {
+  .card-header {
+    font-size:30px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .card-header {
+    font-size:40px;
+  }
+}
+.card-header {
+  padding-top:40px;
+  color:#25183a;
+  font-weight:600;
+  text-align: center;
+  background-color:white;
+  text-shadow:1px 0px 10px rgba(0, 0, 0, 0.5);
+  border:none;
+
+  
+  bottom:-.7vh;
+}
+@media only screen and (max-width: 1000px) {
+  .card-row4 {
+    flex-direction: column;
+  }
+  .card-row2 {
+    flex-direction: column;
+    margin-left:85px;
+    margin-right:85px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .card-row4 {
+    flex-direction: row;
+  }
+  .card-row2{
+    flex-direction: row;
+    margin-left:300px;
+    margin-right:300px;
+  }
+}
+.card-row4 {
+  padding:0;
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+  margin-left:2vw;
+  margin-right:2vw;
+}
+.card-row2 {
+  padding:0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left:2vw;
+  margin-right:2vw;
+}
+
+.card {
+  font-family: 'Open Sans', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  text-align: center;
+  height:300px;
+  border:none;
+  border-radius:25px;
+  
+  
+  
+
+}
+
+.card-profile-container {
+  margin:0;
+  padding:0;
+}
+
+.card-profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 200px;
+  opacity: 1;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 1);
+  -webkit-transform: translate(-50%, 3%);
+  transform: translate(-50%, 35%);
+  z-index:500;
+}
+
+
+.card-profile:hover {
+  filter:blur(4px) brightness(0.75);
+  border: 2px solid #f66587;
+  transition:.7s ease-in-out;
+}
+.card-word {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 200px;
+  opacity: 0;
+  -webkit-transform: translate(-50%, 3%);
+  transform: translate(-50%, 35%);
+  z-index:500;
+  visibility: hidden;
+  text-align:center;
+  font-size:20px;
+  color:white;
+}
+.card-profile:hover ~ .card-word{
+  transition: visibility 0s, opacity 0.7s linear;
+  visibility: visible;
+  opacity:1;
+  
+}
+
+.card-content {
+  padding-top:230px;
+  
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+}
+.card-name {
+  margin-bottom:0;
+  padding-bottom:0;
+  font-weight: 600;
+  font-size:20px;
+  vertical-align: middle;
+  color:#25183a;
+}
+.card-team{
+  margin-top:0;
+  padding-top:0;
+  
+  font-size:15px;
+  vertical-align: middle;
+  color:#514662;
+}
+
+

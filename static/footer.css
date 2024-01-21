@@ -1,0 +1,158 @@
+.footer{
+    margin:0;
+    padding:0;
+	background-color: #4A4E69;
+    scroll-snap-align: center;
+}
+.rows {
+    width:100%;
+    margin:0;
+    padding:0;
+    padding-top:5vh;
+    padding-bottom:2vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+}
+.footer-row{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items: center;
+}
+.footer-row ul {
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer-row .social-links a {
+        height: 8vw;
+	    width: 8vw;
+        padding-top:2vw;
+    }
+    .footer-row .social-links a i {
+        padding-top:2vw;
+        font-size:4vw;
+        padding-bottom:2vw;
+    }
+    .footer-row .link ul li a{
+        font-size: 17px;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .footer-row .social-links a {
+        height: 3vw;
+	    width: 3vw;
+    }
+    .footer-row .social-links a i {
+        height:100%;
+        width:100%;
+    }
+    .footer-row .link ul li a{
+        font-size: 1.3vw;
+    }
+    
+}
+
+
+/* Social Links*/
+.footer-row .social-links a{
+	display: inline-block;
+	background-color: rgba(255,255,255,0.2);
+	margin:.1vw .5vw .5vw .5vw;
+	text-align: center;
+	line-height: 3vw;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+    font-family:  'IBM Plex Sans', sans-serif;
+}
+
+.footer-row .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+
+
+/* Project*/
+.footer-row .link ul li {
+    margin:0;
+    padding:0;
+
+    margin-left:1.5vw;
+    margin-right:2.2vw;
+    margin-top:.5vw;
+    margin-bottom:.5vw;
+    
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.footer-row .link ul li a{
+    margin-top:1vh;
+	
+    text-decoration: none;
+	text-transform: capitalize;
+	
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+    font-family:  'IBM Plex Sans', sans-serif;
+}
+.footer-row .link ul li a:hover{
+	color: #ffffff;
+	padding-left: .8vw;
+}
+
+
+
+/* Year*/
+.footer-row .year ul{
+	display: flex;
+    flex-direction: column;
+    margin:0;
+    padding-top:0.5vh;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 2vh;
+    
+	
+}
+.footer-row .year ul li p{
+	font-size: 1.2vw;
+    text-decoration: none;
+    margin:0;
+    padding:0;
+	
+	color: #ffffff;
+    font-family:  'IBM Plex Sans', sans-serif;
+    float:inherit;
+}
+.footer-row .year ul li p a{
+	font-size: 1.2vw;
+    text-decoration: none;
+    margin:0;
+    padding:0;
+	font-family:  'IBM Plex Sans', sans-serif;
+	color: #ffffff;
+    text-align: center;
+}
+
+
+.footer-icon {
+    fill: white;
+}
+
+
+
+
+
+

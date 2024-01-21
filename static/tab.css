@@ -1,0 +1,164 @@
+
+  /* start js */
+  .tab-hidden {
+    display: none;
+  }
+  
+  .btn-active {
+    transform: translateY(-1.5vw);
+  }
+  /* end js */
+  
+  .tab-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #EBEBEB;
+    padding: 2rem 0;
+    border-radius: 5px;
+    border-color:2px black;
+    position: relative;
+    margin-top:5vw;
+  }
+    /* @media only screen and (max-width: 600px) {
+        .tab-container {
+            height:100vw;
+        }
+    }
+    @media only screen and (max-width: 800px) {
+        .tab-container {
+            height:100vw;
+        }
+    }
+    @media only screen and (min-width: 801px) and (max-width:1200px) {
+        .tab-container {
+            height:100vw;
+        }
+    }
+    @media only screen and (min-width: 1201px) {
+        .tab-container {
+            height: 100vw;
+        }
+    }
+    @media only screen and (min-width: 2000px) {
+        .tab-container {
+            height: 100vw;
+        }
+    } */
+  .tab-container .tabs {
+    position: absolute;
+    top: 2vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height:6vw;
+    transform: translateY(-5vw);
+
+  }
+  .tab-container .tabs button {
+    height: 5vw;
+    width: 18%;
+    border-radius: 20px;
+    font-size: 1.5vw;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    color:white
+  }
+  .tab-container .tabs button:first-of-type {
+    background-color: #513681
+  }
+  
+  .tab-container .tabs button:first-of-type:hover {
+    background-color: #513681
+  }
+  .tab-container .tabs button:nth-of-type(2) {
+    background-color: #513681
+  }
+  
+  .tab-container .tabs button:nth-of-type(2):hover {
+    background-color: #513681
+  }
+  .tab-container .tabs button:nth-of-type(3) {
+    background-color: #111D41
+  }
+  
+  .tab-container .tabs button:nth-of-type(3):hover {
+    background-color: #111D41
+  }
+  
+  .tab-container .tabs button:nth-of-type(4) {
+    background-color: #435A9D
+  }
+  
+  .tab-container .tabs button:nth-of-type(4):hover {
+    background-color: #435A9D
+  }
+  .tab-container .tabs button:nth-of-type(5) {
+    background-color: #3A506B;
+  }
+  
+  .tab-container .tabs button:nth-of-type(5):hover {
+    background-color: #3A506B
+  }
+  .tab-container .tabs button:nth-of-type(6) {
+    background-color: #5BC0BE
+  }
+  
+  .tab-container .tabs button:nth-of-type(6):hover {
+    background-color: #5BC0BE
+  }
+  
+  .tab-container .tabs button:last-of-type {
+    background-color: #858585
+  }
+  
+  .tab-container .tabs button:last-of-type:hover {
+    background-color: #858585
+  }
+  
+  /* content */
+  .tab-container .tabs__content {
+    width:100%;
+    position: absolute;
+    top: 2vw;
+    padding-top: 1vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    /*transform: translateY(-50%);*/
+  }
+  .tab-container .tabs__content .tab-content {
+    position: relative;
+  }
+  .tab-container .tabs__content .tab-content h3 {
+    color: #3A506B;
+    font-weight:800;
+    margin: 1vw 0;
+    position: relative;
+  }
+  
+  .tab-container .tabs__content .tab-content img {
+    width:100%;
+    border-radius:20px;
+  }
+  
+  .tab-container .tabs__content .tab-content:first-of-type h3::before {
+    background-color: #ffcd0551;
+  }
+  
+  .tab-container .tabs__content .tab-content:nth-of-type(2) h3::before {
+    background-color: #0bcb7e57;
+  }
+  
+  .tab-container .tabs__content .tab-content:last-of-type h3::before {
+    background-color: #ff425b58;
+  }
+  
+  .tab-container .tabs__content .tab-content p {
+    line-height: 1.7;
+    color: #555;
+    font-size: 1.2rem;
+
+  }
+
+

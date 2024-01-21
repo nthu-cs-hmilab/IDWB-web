@@ -1,0 +1,120 @@
+.row-contain {
+  margin-bottom:40px;
+  padding:0;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-card {
+  font-family: 'Open Sans', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  height:368px;
+  border:none;
+  border-radius:25px;
+}
+.profile-card:hover{
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  transition:.5s ease-in-out;
+}
+.profile-card:hover .profile{
+  max-width: 200px;
+  transition:.5s ease-in-out;
+}
+.profile-card .background-block {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.profile-card .background-block .background {
+  width:100%;
+  vertical-align: top;
+  opacity: 0.9;
+  -webkit-filter: blur(0.5px);
+  filter: blur(0.5px);
+   -webkit-transform: scale(3);
+  transform: scale(3);
+}
+.profile-card .card-content {
+  width: 100%;
+  padding: 15px 25px;
+  color:#232323;
+  float:left;
+  background:#efefef;
+  height:50%;
+  border-radius:0 0 5px 5px;
+  position: relative;
+  z-index: 49;
+}
+.profile-card .card-content::before {
+    content: '';
+    background: #efefef;
+    width: 120%;
+    height: 100%;
+    left: 11px;
+    bottom: 51px;
+    position: absolute;
+    z-index: -1;
+    transform: rotate(-13deg);
+}
+.profile-card .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  max-width: 100px;
+  opacity: 1;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 1);
+  -webkit-transform: translate(-50%, 3%);
+  transform: translate(-50%, 3%);
+  z-index:500;
+}
+.profile-card .card-content {
+  line-height:30px;
+}
+.profile-card p {
+  margin: 0 0 5px;
+  font-weight: 600;
+  font-size:25px;
+  vertical-align: middle
+}
+.profile-card p small {
+  display: block;
+  font-size: 15px;
+  margin-top:10px;
+}
+.profile-card:hover .profile-card p {
+  font-size:30px;
+}
+.profile-card .icon-block{
+  float:left;
+  width:100%;
+  margin-top:15px;
+}
+.profile-card .icon-block a{
+  text-decoration:none;
+}
+.profile-card i {
+  display: inline-block;
+  font-size: 16px;
+  color: #25183a;
+  text-align: center;
+  border: 1px solid #25183a;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  margin:0 5px;
+}
+.profile-card i:hover {
+  background-color:#25183a;
+  color:#fff;
+  text-decoration:none;
+}
+
+

@@ -1,0 +1,207 @@
+/* Background */
+.nav_background_container {
+    width:100vw;
+    height:100vh;
+    scroll-snap-align: center;
+    
+}
+.nav_background {
+    background-image: url(https://i.pinimg.com/564x/22/cf/b0/22cfb0b30ce1ffd3b7023e6103df3465.jpg);
+    backdrop-filter:brightness(50%);
+    /* filter:brightness(50%); */
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    clip-path: ellipse(100vw 95vh at 50% 0%);
+    scroll-snap-align: center;
+    display:inline-block;
+    margin-top:0;
+
+}
+/* Arrow on Background*/
+.arrow {
+    margin-top:22vh;
+    margin-left:auto;
+    margin-right:auto;
+    
+    width:5vw;
+    height:5vw;
+    border-radius:50%;
+    position:relative;
+    box-shadow: 0 0 1vw 0vw rgba(0, 0, 0, .2);
+    transition: 1s ease;
+    cursor: pointer;
+    z-index:100;
+}
+.arrow:hover {
+    box-shadow: 0 0 4vh 0vh rgba(0, 0, 0, .5);
+    transition: .8s ease;
+}
+.arrow p{
+    color:white;
+    position:absolute;
+    width:2vw;
+    height:2vw;
+    border-top: 3px solid;
+    border-left: 3px solid;
+    transform:rotate(225deg);
+    left:1.45vw;
+    top:1.2vw;
+}
+/* Navbar Background*/
+.nav_content {
+    width:100vw;
+    height:10vh;
+    margin:0;
+    position:fixed;
+    z-index: 10000000000;;
+    background-color:rgb(0, 0, 0, 0);
+    top:0;
+
+    z-index: 10000!important;
+    scroll-snap-align:center;
+}
+.nav_content:hover {
+    height:44vh;
+    padding-bottom:34vh;
+}
+/* Navbar*/
+nav {
+    padding:0;
+    margin:0;
+    
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+}
+.dropdown {
+    margin:0;
+    margin-left:5vw;
+    padding:0;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    list-style-type:none;
+}
+/* Dropbutton Title*/
+.dropbutton {
+    margin:0;
+    padding:0;
+    margin-right:3.5vw;
+    display:flex;
+    flex-direction:row;
+    justify-items: left;
+    align-items:bottom; 
+}
+.index-logo {
+    padding:0;
+    width:5vw;
+    margin:0;
+}
+.dropbutton-title {
+    margin:0;
+    z-index:-1;
+    position:relative;
+    font-family:  'IBM Plex Sans', sans-serif;
+}
+.dropbutton-title a{
+    color:#fff;
+    background-color: rgba(0, 0, 0, 0);
+    border:none;
+    cursor: pointer;
+    position:relative;
+    font-size: 1.5vw;
+    text-decoration:none;
+    padding-left:.4vw;
+}
+/* Dropbutton Title Underline*/
+.dropbutton-title a:after{
+    color:#fff;
+    content:"";
+    background-color:#513681;
+    height:.4vh;
+    bottom:-.7vh;
+    width:0%;
+    position:absolute;
+    left:0;
+    transition: 1s ease-out;
+}
+.dropbutton-title a:hover:after{
+    width:100%;
+    background-color:#f66587;
+}
+.dropbutton:hover .dropbutton-title a:after{
+    width:100%;
+    background-color:#f66587;
+}
+
+/* Dropbutton Content */
+.dropbutton-content {
+    display:none!important;
+    padding-top:5vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:flex-start;
+    margin-left:.25vw;
+    z-index:100;
+    width:30%;
+
+}
+.dropbutton-content a {
+    color:#fff;
+    border:none;
+    cursor: pointer;
+    font-size: 1.5vw;
+    text-decoration:none;
+    margin-bottom:.6vh;
+    font-family:  'IBM Plex Sans', sans-serif;
+}
+
+.dropbutton:hover .dropbutton-content {
+    transition: 1s ease-in;
+    display:inline-flex !important;
+}
+.dropbutton-title:hover .dropbutton-content {
+    transition: 1s ease-in;
+    display:inline-flex !important;
+}
+.dropbutton-content:hover .dropbutton-content {
+    transition: 1s ease-in;
+    display:inline-flex !important;
+}
+
+.navbar-fixed-top.scrolled {
+    backdrop-filter: blur(30px);
+    transition: background-color 200ms linear;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .6)
+}
+.navbar-fixed-top.scrolled .dropbutton-title a {
+    color: #25183a !important;
+}
+.navbar-fixed-top.scrolled .dropbutton-content a {
+    color: #25183a !important;
+}
+
+
+
+.navbar-fixed-top.scrolled:hover {
+    backdrop-filter: blur(70px);
+    transition: background-color 1s ease-in;
+}
+.navbar-fixed-top.scrolled:hover .dropbutton-title a {
+    color: #25183a !important;
+}
+.navbar-fixed-top.scrolled:hover .dropbutton-title a:after {
+    background-color: #5d4fe3 !important;
+}
+.navbar-fixed-top.scrolled:hover .dropbutton-title a:hover:after {
+    background-color: #fff !important;
+}
+.navbar-fixed-top.scrolled:hover .dropbutton-content a {
+    color: #25183a !important;
+}
+
