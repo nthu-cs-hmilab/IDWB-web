@@ -237,7 +237,7 @@
         <div class="container">
           <div class="row" style="justify-content: center;">
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
-                  <form id="google-form" class="form" action="#" method="POST" role="form">
+                  <form id="google-form" class="form">
                       <div class="form-group">
                           <label class="form-label" for="req-name">Requester's Name</label>
                           <input type="text" class="form-control" id="req-name" name="req-name" placeholder="Your Name" tabindex="1" required>
@@ -258,7 +258,7 @@
                         <label class="form-label" for="affiliation">Affiliation</label>
                         <input type="text" class="form-control" id="affiliation" name="affiliation" placeholder="Affiliation" tabindex="5" required>
                       </div>
-                      <!-- <div class="form-group">
+                      <div class="form-group">
                         <label class="check-label" for="dataset">Select Dataset</label>
                         <select class="form-control" id="dataset" name="dataset" tabindex="6" required>
                           <option>Architecture Design</option>
@@ -267,7 +267,7 @@
                           <option>Architecture + Interior</option>
                           <option>Architecture + Interior + fMRI</option>
                         </select>
-                      </div> -->
+                      </div>
                       <div class="text-center">
                         <button type="submit" class="btn btn-start-order">Submit</button>
                       </div>
@@ -431,7 +431,7 @@
         //在這裡我們要先擋掉form默認事件
         e.preventDefault();
 
-        if ($('#req-name').val() && $('#req-email').val() && $('#pi-name').val() && $('#pi-email').val() && $('#affiliation').val()) {//需要先確認必填欄位是否填寫
+        if ($('#req-name').val() && $('#req-email').val() && $('#pi-name').val() && $('#pi-email').val() && $('#affiliation').val() && $('#dataset').val()) {//需要先確認必填欄位是否填寫
           $.ajax({
             // url為Google Form按下submit的aciotn
             url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdEm9VShPfbw7_5D_-Cr5BiwOCl1glj0M9EycWpdpuIrpU-aQ/formResponse",
@@ -441,8 +441,8 @@
               "entry.42438986": $('#req-email').val(),
               "entry.358718244": $('#pi-name').val(),
               "entry.1609973084": $('#pi-email').val(),
-              "entry.1938561407": $('#affiliation').val()
-              // "entry.1920412864": $('#dataset').val()
+              "entry.1938561407": $('#affiliation').val(),
+              "entry.281037552": $('#dataset').val()
             },
             type: "POST", //因為是要進行insert的動作，故事用POST
             dataType: "JSONP",
@@ -453,7 +453,7 @@
               $('#pi-name').val('')
               $('#pi-email').val('')
               $('#affiliation').val('')
-              // $('#dataset').val('')
+              $('#dataset').val('')
               //最後跳轉到感謝的頁面
               thank_block.style.display = "flex";
             }
