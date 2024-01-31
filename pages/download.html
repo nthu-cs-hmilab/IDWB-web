@@ -431,7 +431,7 @@
         //在這裡我們要先擋掉form默認事件
         e.preventDefault();
 
-        if ($('#req-name').val() && $('#req-email').val() && $('#pi-name').val() && $('#pi-email').val() && $('#affiliation').val() && $('#dataset').val()) {//需要先確認必填欄位是否填寫
+        if ($('#req-name').val() && $('#req-email').val() && $('#pi-name').val() && $('#pi-email').val() && $('#affiliation').val()) {//需要先確認必填欄位是否填寫
           $.ajax({
             // url為Google Form按下submit的aciotn
             url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdEm9VShPfbw7_5D_-Cr5BiwOCl1glj0M9EycWpdpuIrpU-aQ/formResponse",
