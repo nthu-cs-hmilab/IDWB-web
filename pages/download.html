@@ -212,7 +212,8 @@
             <li><a id="sidebaritem1" href="#heading1">Terms of Use</a></li>
             <li><a id="sidebaritem2" href="#heading2">Architecture Design</a></li>
             <li><a id="sidebaritem3" href="#heading3">Interior Design</a></li>
-            <li><a id="sidebaritem4" href="#heading4">Apply Form</a></li>
+            <li><a id="sidebaritem4" href="#heading4">fMRI Data</a></li>
+            <li><a id="sidebaritem5" href="#heading5">Apply Form</a></li>
           </ul>
     
         </div>
@@ -232,8 +233,12 @@
         <p class="des-paragraph">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor sem ac congue aliquam. Fusce vitae convallis risus, vitae ultrices nulla. Nullam eget dignissim eros. Morbi posuere dictum lacinia. Curabitur convallis massa leo, eget volutpat nisi euismod sit amet. Suspendisse convallis lacus ac arcu molestie gravida. Sed ornare nunc tellus, nec egestas mi suscipit a. Nam consequat pulvinar metus, id cursus nisl lacinia quis. Nam imperdiet bibendum leo, non venenatis mi sagittis et. Proin finibus, enim nec dictum rutrum, tellus dolor accumsan metus, a efficitur odio mauris non nunc. 
         </p>
+        <h1 class="des-heading1" id="heading4">fMRI Data</h1>
+        <p class="des-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor sem ac congue aliquam. Fusce vitae convallis risus, vitae ultrices nulla. Nullam eget dignissim eros. Morbi posuere dictum lacinia. Curabitur convallis massa leo, eget volutpat nisi euismod sit amet. Suspendisse convallis lacus ac arcu molestie gravida. Sed ornare nunc tellus, nec egestas mi suscipit a. Nam consequat pulvinar metus, id cursus nisl lacinia quis. Nam imperdiet bibendum leo, non venenatis mi sagittis et. Proin finibus, enim nec dictum rutrum, tellus dolor accumsan metus, a efficitur odio mauris non nunc. 
+        </p>
 
-        <h1 class="des-heading1" id="heading4">Apply Form</h1>
+        <h1 class="des-heading1" id="heading5">Apply Form</h1>
         <div class="container">
           <div class="row" style="justify-content: center;">
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
@@ -361,8 +366,8 @@
           hH3 = $('#heading3').outerHeight(),
           hT4 = $('#heading4').offset().top,
           hH4 = $('#heading4').outerHeight(),
-          // hT5 = $('#heading5').offset().top,
-          // hH5 = $('#heading5').outerHeight(),
+          hT5 = $('#heading5').offset().top,
+          hH5 = $('#heading5').outerHeight(),
           //hT6 = $('#heading6').offset().top,
           //hH6 = $('#heading6').outerHeight(),
           wH = $(window).height(),
@@ -375,9 +380,9 @@
           var $nav3 = $("#sidebaritem3");
           $nav3.toggleClass('scrolled', (wS > (hT3+hH3-3*nav))&&(wS < (hT4+hH4-3*nav)));
           var $nav4 = $("#sidebaritem4");
-          $nav4.toggleClass('scrolled', (wS > (hT4+hH4-3*nav)));
-          // var $nav5 = $("#sidebaritem5");
-          // $nav5.toggleClass('scrolled', (wS > (hT5+hH5-3*nav)));
+          $nav4.toggleClass('scrolled', (wS > (hT4+hH4-3*nav))&&(wS < (hT5+hH5-3*nav)));
+          var $nav5 = $("#sidebaritem5");
+          $nav5.toggleClass('scrolled', (wS > (hT5+hH5-3*nav)));
           /*var $nav6 = $("#sidebaritem6");
           $nav6.toggleClass('scrolled', (wS > (hT6+hH6-3*nav)));*/
       });
