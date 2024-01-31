@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="National Tsing Hua University Brain Space Machine">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../static/images/hmi.png"/>
+    <!-- <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/> -->
+    <!-- 內文<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <!-- Navbar<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+    <link href="../static/header.css" rel="stylesheet">
+    <link href="../static/footer.css" rel="stylesheet">
+    <link href="../static/index.css" rel="stylesheet">
+    <link href="../static/sidebar.css" rel="stylesheet">
+    <link href="../static/team.css" rel="stylesheet">
+    <link href="../static/book.css" rel="stylesheet">
+    <link href="../static/banner.css" rel="stylesheet">
+    <link href="../static/education.css" rel="stylesheet">
+    <link href="../static/tab.css" rel="stylesheet">
+    <link href="../static/loading.min.css" rel="stylesheet">
+    <link href="../static/card.css" rel="stylesheet">
+
+    <script src="../static/jquery-1.10.2.js"></script>
+    <!--<script src="{{ url_for('static', filename = 'footer_icon.js') }}"></script>-->
+    <script src="../static/navbar.js" defer></script>
+    <script src="../static/education.js" defer></script>
+    <script src="../static/index.js" defer></script>
+    <script src="../static/slideshow.js" defer></script>
+    <script src="../static/tab.js" defer></script>
+    <script src="../static/canva.js" defer></script>
+
+    <title>Spaces 002 | IDWB</title>
+    
+</head>
+<body>
+  <style>
+
+    .demo-left {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: 1vw;
+        color: #22223B;
+        background-color: #F2E9E4;
+        /* min-height:70vh; */
+        overflow: auto;
+    }
+    
+    .demo-left .demo-left-p {
+      font-size: medium;
+      text-align: justify;
+      padding-right: 1vw;
+      margin-top: 1vw;
+      overflow: auto;
+      max-height: 70vh;
+    }
+    
+    .demo-left .follow-wrapper {
+        /* max-height: 5vh; */
+        margin-top: 1vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .follow-wrapper .demo-btn {
+      display: inline-block;
+      background-color: #C9ADA7;
+      margin:.5vw .5vw .5vw .5vw;
+      text-align: center;
+      height: 3vw;
+      width: 3vw;
+      line-height: 3vw;
+      border-radius: 50%;
+      color: #ffffff;
+      transition: all 0.5s ease;
+      font-family:  'IBM Plex Sans', sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    .follow-wrapper .demo-btn:hover{
+      /* color: #22223B; */
+      background-color: #9A8C98;
+    }
+    
+    .demo-right {
+        width: 70%;
+        /* max-height: 50%; */
+        /* height: 70vh; */
+        position: relative;
+        margin: auto;
+        /* padding-left: 3vw; */
+    }
+    
+    .demo-right .mySlides_A {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .demo-right .mySlides_A img {
+        height: auto;
+    }
+    .demo-right .mySlides_I1 {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .demo-right .mySlides_I1 img {
+        height: auto;
+    }
+    .demo-right .mySlides_I2 {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .demo-right .mySlides_I2 img {
+        height: auto;
+    }
+    .demo-right .mySlides_I3 {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .demo-right .mySlides_I3 img {
+        height: auto;
+    }
+    .demo-right .mySlides_I4 {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .demo-right .mySlides_I4 img {
+        height: auto;
+    }
+    
+    </style>
+  <!-- loading start -->
+  <style>
+    @media screen and (max-width: 720px) {
+      .loader {
+        width: 100% !important;
+      }
+    }
+
+    #loader-wrapper {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100000;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background-color: 	#9A8C98;
+    }
+
+    .loader {
+      color: #FE9901;
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .loader-n {
+      border: 2vw solid #F2E9E4;
+      border-top: 2vw solid #4A4E69;
+      border-radius: 50%;
+      width: 10vw;
+      height: 10vw;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* .loader img { */
+      /* width: 17vw; */
+      /* margin-top: 25px;
+      margin-bottom: 0px; */
+      /* margin-top:7vw; */
+    /* } */
+  </style>
+
+  <div id="loader-wrapper">
+    <!-- <img style="position: absolute; bottom: 25vh; width:40%" src="https://static.igem.wiki/teams/4336/wiki/loading/loading-trans.gif" alt="Please wait a minute for preparing the website..."> -->
+    <div class="loader-n"></div>
+  </div>
+  <!-- loading end -->
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top nav_content navbar-fixed-top">
+    <ul class="dropdown">
+        <li class="dropbutton" style="margin-right:5vw;">
+            <a href="./index.html"><img class="index-logo" src="../static/images/hmi.png"></a>
+        </li>
+        <li class="dropbutton">
+            <div class="dropbutton-title"><a href="">Introduction</a></div>
+        </li>
+        <li class="dropbutton">
+            <div class="dropbutton-title"><a href="./spaces.html">Spaces Design</a></div>
+        </li>
+        <li class="dropbutton">
+            <div class="dropbutton-title"><a href="./download.html">Download</a></div>
+        </li>
+    </ul>
+  </nav> 
+
+  <!-- banner -->
+  <section class="banner-container">
+    <div class="banner-spaces"></div>
+    <div class="banner-word">
+        <div class="banner-header">Space 002</div>
+        <!-- <div class="banner-para">Avenue ahead to our dream.</div> -->
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <section class="content">
+    <!-- space-1 demo -->
+          <div class="demo-left">
+            <h1 class="des-heading2">Description</h1>
+            <div class="demo-left-p" id="A-d">
+              <ol>
+                <li class="des-number">Living room/kitchen not connected to other spaces</li>
+                <li class="des-number">Window-to-Wall Area Ratio 25-35%</li>
+                <li class="des-number">Ceiling Height > 3.8 m</li>
+                <li class="des-number">Common residential rectangle</li>
+                <li class="des-number">Exterior wall total area: 170 m<sup>2</sup></li>
+                <li class="des-number">Window area: 47.505 m<sup>2</sup></li>
+                <li class="des-number">Window-to-wall ratio: 28%</li>
+              </ol>
+              <hr>
+              The user configuration is set for a small family of three individuals. The couple is between 35 and 45 years old, and the child is around 9 years old.
+              </br>
+              </br>
+              The main living spaces include the master bedroom with a basic bathroom, a guest room, a study (also serving as a guest room), a kitchen, and a living room, each functioning as independent areas with a complete foyer.
+              </br>
+              </br>
+              The overall layout is square-shaped, with ample natural light in the living room and balcony. The kitchen has a convenient work balcony for storage, and the spatial transitions are gently buffered, providing a comfortable atmosphere. The ceiling height of the space is 3.85 meters.
+            </div>
+            <div class="demo-left-p" id="I1-d" style="display:none">
+              <h2 class="des-heading3">Foyer</h2>
+              </br>
+              Utilizing a stable wood grain color paired with black-based cabinets, the lower section is designed as open shelves for easy access to everyday shoes without the need to frequently open or close doors. The back wall of the shoe-wearing chair features a wooden lattice for hanging clothes and a design that serves as a coat rack. This section is ideal for hanging everyday outerwear, bags, and hats. The opposite wall uses a special hand-applied gray texture paint combined with a large floor-to-ceiling gray mirror, not only enhancing the sense of space but also serving as a dressing mirror.
+              <hr>
+              Matte Gray Baking Paint / Matte Black Baking Paint / Wood Veneer / Special Paint with Hand-Applied Clear Water Model in Gray / Matte Black Hardware Handles / Gray Mirror / Wood Flooring / Recessed Lighting
+              <h2 class="des-heading3">Kitchen</h2>
+              </br>
+              Due to the ample space available, a kitchen island has been incorporated to enhance the usable countertop area. On the other side, a dining sideboard is placed to increase the kitchen's storage functionality. The dining table features a curved tabletop, sleek iron table legs, and refined pendant lights, elevating the overall aesthetic. The kitchen utilizes a black marble countertop to complement the gray cabinets and some wooden veneer.
+              <hr>
+              Matte Gray Baking Paint / Black Marble / White Paint / Wood Veneer / Wood Flooring / Recessed Lighting
+              <h2 class="des-heading3">Living Room</h2>
+              </br>
+              Similarly adhering to a color scheme of black, gray, and white, wood grain is introduced to add warmth to the space and prevent it from feeling too cold. The wood grain extends directly to the bottom of the corridor, and the sofa wall is adorned with special paint and wooden lattice, echoing the design of the foyer for a unified feel. The TV wall features a combination of low cabinets and tall cabinets, incorporating a misty fireplace, instantly elevating the warm ambiance of the space. To enhance design vibrancy, the back wall of the TV section introduces segmented lines, cut in proportion for added visual interest.
+              <hr>
+              Matte White Baking Paint / White Paint / Matte Gray Baking Paint / Special Paint with Hand-Applied Clear Water Model in Gray / Wood Veneer / Wood Flooring / Recessed Lighting
+              <h2 class="des-heading3">Study</h2>
+              </br>
+              The desk extends forward, creating a sense of spaciousness and sophistication. Narrow-framed black cabinets add an elegant quality to the space, complemented by the wood grain extending along the back of the owner's chair. The wall features segmented lines and a varied display bookshelf, maintaining a balanced and interesting atmosphere in the space.
+              <hr>
+              Matte Iron Gray Baking Paint / Wood Veneer / White Paint / Wood Flooring / Recessed Lighting
+              <h2 class="des-heading3">Secondary Bedroom</h2>
+              </br>
+              In terms of layout, opting for a bed with a tatami mattress is chosen to create a sense of increased space and to enhance storage functionality. A full wall of wardrobe storage cabinets, using a combination of wood grain and gray tones with contrasting accents, serves both practical and aesthetic purposes. The gray cabinet doors employ varying sizes of segmentation to introduce an element of visual interest. Similarly, the bookshelf on the other side employs an uneven sizing approach to proportionally divide the space, combining open and closed sections to enhance spatial appeal.
+              <hr>
+              Matte Gray Baking Paint / Matte Black Baking Paint / Special Paint with Hand-Applied Clear Water Model in Gray / Wood Veneer / White Paint / Wood Flooring / Recessed Lighting
+              <h2 class="des-heading3">Master Bedroom</h2>
+              </br>
+              The headboard lattice complements the lattice design outside, achieving a cohesive element throughout. The wardrobe is presented in a glass showcase style, utilizing the play of light to create additional layers within the space.
+              <hr>
+              Matte Gray Baking Paint / White Paint / Black Iron Frame Inset with Gray Glass / Wood Veneer / Wood Flooring / Recessed Lighting
+              <h2 class="des-heading3">Master Bathroom:</h2>
+              </br>
+              Presented in a gray and white color scheme, the use of black frames is an important element for creating a modern feel. The simple and sleek white floor basin, paired with a black-framed splash guard glass, along with black hardware accessories, enhances the overall quality and aesthetic appeal.
+              <hr>
+              Marble / Black Frame Inset with Clear Glass / Wood Veneer / Mirrored Surface
+            </div>
+            <div class="demo-left-p" id="I2-d" style="display:none">
+              Mauris auctor facilisis ipsum, ut laoreet sem convallis vitae. Fusce in condimentum sapien. Donec eget tincidunt erat, eget egestas nisi. In non iaculis massa. Sed quis mi ligula. Etiam imperdiet lorem sed ornare egestas. In et quam et tortor tempor imperdiet. Morbi id maximus erat. Sed lobortis posuere est. Aenean facilisis nisi facilisis nisl congue, vitae mollis eros interdum. Ut ac lobortis tortor. In sed dictum neque, ac interdum mi. Proin quis orci luctus, malesuada elit quis, sollicitudin ex.
+            </div>
+            <div class="demo-left-p" id="I3-d" style="display:none">
+              Maecenas eget nulla nisl. Phasellus vehicula non ipsum feugiat ultricies. Nunc pulvinar sed mi quis condimentum. Aliquam vitae leo quis purus ornare semper non et massa. Duis eleifend magna justo, id aliquet ex volutpat vel. In vehicula felis sed turpis suscipit, nec lacinia risus iaculis. Nulla nisl felis, facilisis ut gravida vel, ullamcorper in ligula. Cras sed nibh sagittis, mollis nibh volutpat, suscipit velit. In ut diam ultrices, imperdiet orci nec, sagittis dui. Nullam luctus, enim a dignissim ornare, elit eros pulvinar lorem, a cursus mi sem sit amet leo. Phasellus imperdiet mi ut dictum sodales. Maecenas mollis nibh quam, quis faucibus dui maximus a. Ut tempor, orci nec aliquet hendrerit, nibh dolor rutrum est, non cursus dolor ipsum et sapien.
+            </div>
+            <div class="demo-left-p" id="I4-d" style="display:none">
+              Ut suscipit accumsan purus ut sodales. Morbi venenatis eget nulla sed rhoncus. Sed a dapibus lectus. Phasellus sit amet massa ex. Phasellus egestas orci at turpis commodo convallis. Proin egestas metus vel leo imperdiet finibus nec sed mauris. Nullam iaculis rhoncus diam, eget posuere ex luctus id. Nulla tristique fringilla suscipit. Cras efficitur egestas aliquet. Nullam consectetur efficitur posuere. Morbi faucibus consequat lacus non sollicitudin.
+            </div>
+            <div class="follow-wrapper">
+              <a class="demo-btn" href="#"><svg fill=#F2E9E4 xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg></a>
+              <div class="demo-btn" id="A-btn">A</div>
+              <div class="demo-btn" id="I1-btn">I1</div>
+              <div class="demo-btn" id="I2-btn">I2</div>
+              <div class="demo-btn" id="I3-btn">I3</div>
+              <div class="demo-btn" id="I4-btn">I4</div>
+            </div>
+          </div>
+          <!-- <iframe class="demo-right" src="https://3dwarehouse.sketchup.com/embed/5aa8dc39-ed2c-471b-af56-ae73cd0c645c?token=JkViSF9V0Cw=&binaryName=s21" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="450" height="500" allowfullscreen></iframe> -->
+          <div class="demo-right" id="A">
+            <div class="mySlides_A" id="A_1">
+              <div class="numbertext">1 / 23 Area</div>
+              <img src="../static/images/A1/area_a1_1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_2">
+              <div class="numbertext">2 / 23 Floor plan</div>
+              <img src="../static/images/A1/floor_plan_a1_1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_3">
+              <div class="numbertext">3 / 23 Floor plan (furniture)</div>
+              <img src="../static/images/A1/furniture_a1_1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_4">
+              <div class="numbertext">4 / 23 Camera position</div>
+              <img src="../static/images/A1/camera_pos_a1_1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_5">
+              <div class="numbertext">5 / 23 Elevation 1</div>
+              <img src="../static/images/A1/elevation-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_6">
+              <div class="numbertext">6 / 23 Elevation 2</div>
+              <img src="../static/images/A1/elevation-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_7">
+              <div class="numbertext">7 / 23 Elevation 3</div>
+              <img src="../static/images/A1/elevation-3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_8">
+              <div class="numbertext">8 / 23 Elevation 4</div>
+              <img src="../static/images/A1/elevation-4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_9">
+              <div class="numbertext">9 / 23 Panoramic perspective</div>
+              <img src="../static/images/A1/panoramic-perspective.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_10">
+              <div class="numbertext">10 / 23 Panoramic isometric</div>
+              <img src="../static/images/A1/panoramic-isometric.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_11">
+              <div class="numbertext">11 / 23 Camera position 1 - entry</div>
+              <img src="../static/images/A1/entry-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_12">
+              <div class="numbertext">12 / 23 Camera position 2 - foyer 1</div>
+              <img src="../static/images/A1/foyer.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_13">
+              <div class="numbertext">13 / 23 Camera position 3 - foyer 2</div>
+              <img src="../static/images/A1/foyer-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_14">
+              <div class="numbertext">14 / 23 Camera position 4 - kitchen 1</div>
+              <img src="../static/images/A1/kitchen-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_15">
+              <div class="numbertext">15 / 23 Camera position 5 - kitchen 2</div>
+              <img src="../static/images/A1/kitchen-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_16">
+              <div class="numbertext">16 / 23 Camera position 6 - livingroom 1</div>
+              <img src="../static/images/A1/livingroom-3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_17">
+              <div class="numbertext">17 / 23 Camera position 7 - living room 2</div>
+              <img src="../static/images/A1/livingroom-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_18">
+              <div class="numbertext">18 / 23 Camera position 8 - living room 3</div>
+              <img src="../static/images/A1/livingroom-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_19">
+              <div class="numbertext">19 / 23 Camera position 9 - study</div>
+              <img src="../static/images/A1/study-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_20">
+              <div class="numbertext">20 / 23 Camera position 10 - compact room</div>
+              <img src="../static/images/A1/compact-room-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_21">
+              <div class="numbertext">21 / 23 Camera position 11 - bedroom 1</div>
+              <img src="../static/images/A1/bedroom-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_22">
+              <div class="numbertext">22 / 23 Camera position 12 - bedroom 2</div>
+              <img src="../static/images/A1/bedroom-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_A" id="A_23">
+              <div class="numbertext">23 / 23 Camera position 13 - restroom</div>
+              <img src="../static/images/A1/restroom-1.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides_A(-1)">❮</a>
+            <a class="next" onclick="plusSlides_A(1)">❯</a>
+          </div>
+          <div class="demo-right" id="I1" style="display: none">
+            <div class="mySlides_I1" id="I1_1">
+              <div class="numbertext">1 / 19 Panorama</div>
+              <img src="../static/images/A1/I1/panorama.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_2">
+              <div class="numbertext">2 / 19 Floor plan</div>
+              <img src="../static/images/A1/I1/floor-plan.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_3">
+              <div class="numbertext">3 / 19 Elevation notation 1</div>
+              <img src="../static/images/A1/I1/elevation-notation-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_4">
+              <div class="numbertext">4 / 19 Elevation notation 2</div>
+              <img src="../static/images/A1/I1/elevation-notation-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_5">
+              <div class="numbertext">5 / 19 Elevation notation 3</div>
+              <img src="../static/images/A1/I1/elevation-notation-3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_6">
+              <div class="numbertext">6 / 19 Elevation notation 4</div>
+              <img src="../static/images/A1/I1/elevation-notation-4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_7">
+              <div class="numbertext">7 / 19 Entry</div>
+              <img src="../static/images/A1/I1/entry.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_8">
+              <div class="numbertext">8 / 19 Foyer</div>
+              <img src="../static/images/A1/I1/foyer.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_9">
+              <div class="numbertext">9 / 19 Entering living room</div>
+              <img src="../static/images/A1/I1/foyer-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_10">
+              <div class="numbertext">10 / 19 Dining room</div>
+              <img src="../static/images/A1/I1/diningroom.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_11">
+              <div class="numbertext">11 / 19 Kitchen</div>
+              <img src="../static/images/A1/I1/kitchen.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_12">
+              <div class="numbertext">12 / 19 Living room TV wall 1</div>
+              <img src="../static/images/A1/I1/livingroom-tv1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_13">
+              <div class="numbertext">13 / 19 Living room TV wall 2</div>
+              <img src="../static/images/A1/I1/livingroom-tv2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_14">
+              <div class="numbertext">14 / 19 Living room sofa wall</div>
+              <img src="../static/images/A1/I1/livingroom-sofa.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_15">
+              <div class="numbertext">15 / 19 Study</div>
+              <img src="../static/images/A1/I1/study.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_16">
+              <div class="numbertext">16 / 19 Secondary bedroom</div>
+              <img src="../static/images/A1/I1/sec-bedroom.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_17">
+              <div class="numbertext">17 / 19 Master bedroom 1</div>
+              <img src="../static/images/A1/I1/mas-bedroom.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_18">
+              <div class="numbertext">18 / 19 Master bedroom 2</div>
+              <img src="../static/images/A1/I1/mas-bedroom-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides_I1" id="I1_19">
+              <div class="numbertext">19 / 19 Restroom</div>
+              <img src="../static/images/A1/I1/restroom.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides_I1(-1)">❮</a>
+            <a class="next" onclick="plusSlides_I1(1)">❯</a>
+          </div>
+          <div class="demo-right" id="I2" style="display: none">
+            <div class="mySlides_I2" id="I2_1">
+              <div class="numbertext">1 / 15 Panorama</div>
+              <img src="../static/images/A1/area_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;">AMPC</div> -->
+            </div>
+            <div class="mySlides_I2" id="I2_2">
+              <div class="numbertext">2 / 15 Floor plan</div>
+              <img src="../static/images/A1/floor_plan_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;">Microneedle</div> -->
+            </div>
+            <div class="mySlides_I2" id="I2_3">
+              <div class="numbertext">3 / 15 Camera Position 1</div>
+              <img src="../static/images/A1/furniture_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <div class="mySlides_I2" id="I2_4">
+              <div class="numbertext">4 / 15 Camera Position 2</div>
+              <img src="../static/images/A1/camera_pos_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <div class="mySlides_I2" id="I2_5">
+              <div class="numbertext">5 / 15 Camera Position 3</div>
+              <img src="../static/images/A1/camera_pos_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <a class="prev" onclick="plusSlides_I2(-1)">❮</a>
+            <a class="next" onclick="plusSlides_I2(1)">❯</a>
+          </div>
+          <div class="demo-right" id="I3" style="display: none">
+            <div class="mySlides_I3" id="I3_1">
+              <div class="numbertext">1 / 15 Panorama</div>
+              <img src="../static/images/A1/area_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;">AMPC</div> -->
+            </div>
+            <div class="mySlides_I3" id="I3_2">
+              <div class="numbertext">2 / 15 Floor plan</div>
+              <img src="../static/images/floor_plan_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;">Microneedle</div> -->
+            </div>
+            <div class="mySlides_I3" id="I3_3">
+              <div class="numbertext">3 / 15 Camera Position 1</div>
+              <img src="../static/images/A1/furniture_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <div class="mySlides_I3" id="I3_4">
+              <div class="numbertext">4 / 15 Camera Position 2</div>
+              <img src="../static/images/A1/camera_pos_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <div class="mySlides_I3" id="I3_5">
+              <div class="numbertext">5 / 15 Camera Position 3</div>
+              <img src="../static/images/A1/camera_pos_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <a class="prev" onclick="plusSlides_I3(-1)">❮</a>
+            <a class="next" onclick="plusSlides_I3(1)">❯</a>
+          </div>
+          <div class="demo-right" id="I4" style="display: none">
+            <div class="mySlides_I4" id="I4_1">
+              <div class="numbertext">1 / 15 Panorama</div>
+              <img src="../static/images/A1/area_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;">AMPC</div> -->
+            </div>
+            <div class="mySlides_I4" id="I4_2">
+              <div class="numbertext">2 / 15 Floor plan</div>
+              <img src="../static/images/A1/floor_plan_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;">Microneedle</div> -->
+            </div>
+            <div class="mySlides_I4" id="I4_3">
+              <div class="numbertext">3 / 15 Camera Position 1</div>
+              <img src="../static/images/A1/furniture_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <div class="mySlides_I4" id="I4_4">
+              <div class="numbertext">4 / 15 Camera Position 2</div>
+              <img src="../static/images/A1/camera_pos_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <div class="mySlides_I4" id="I4_5">
+              <div class="numbertext">5 / 15 Camera Position 3</div>
+              <img src="../static/images/A1/camera_pos_a1_1.jpg" style="width:100%">
+              <!-- <div class="text" style="bottom: 1vw;"><i>S. aureus</i></div> -->
+            </div>
+            <a class="prev" onclick="plusSlides_I4(-1)">❮</a>
+            <a class="next" onclick="plusSlides_I4(1)">❯</a>
+          </div>
+          <!-- <br> -->
+          <!-- <span id="close-space1" class="close-pcan">X</span> -->
+  
+   </section>
+
+  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+  <footer class="footer">
+      <div class="rows">
+          <div class="footer-row">
+              <div class="social-links">
+                <div class="social-links">
+                  <a target="_blank" href="https://nthu-cs-hmilab.github.io/#"><svg fill=#bbbbbb xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                  <a target="_blank" href="https://sites.google.com/site/bfantasykuo/Home"><svg fill=#bbbbbb xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                  <a target="_blank" href="mailto:kuopc@mit.edu "><svg width="45%"fill=#bbbbbb xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 128C0 92.65 28.65 64 64 64H448C483.3 64 512 92.65 512 128V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V128zM48 128V150.1L220.5 291.7C241.1 308.7 270.9 308.7 291.5 291.7L464 150.1V127.1C464 119.2 456.8 111.1 448 111.1H64C55.16 111.1 48 119.2 48 127.1L48 128zM48 212.2V384C48 392.8 55.16 400 64 400H448C456.8 400 464 392.8 464 384V212.2L322 328.8C283.6 360.3 228.4 360.3 189.1 328.8L48 212.2z"/></svg></a>
+                  <!-- <a target="_blank" href="https://www.youtube.com/channel/UC49LnK5F4nOjvDvBGQngdpg"><svg width="45%"fill=#bbbbbb xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.<path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a> -->
+              </div>
+              </div>
+          </div>
+          <div class="footer-row">
+            <div class="year">
+                <ul>
+                  <li>
+                    <p>National Tsing Hua University Human-Centered Machine Intelligence Lab</p>
+                  </li>
+                  <!-- <li>
+                    <p>The repository used to create this website is available at <a href="https://gitlab.igem.org/templates/wiki-frozen-flask">gitlab.igem.org/templates/wiki-frozen-flask</a>.</p> -->
+                  </li>
+                </ul>
+            </div>
+          </div>
+      </div>
+    </footer>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="../static/bootstrap.bundle.min.js"></script>
+<script defer src="../static/katex.js"></script>
+<script defer src="../static/mhchem.min.js"></script>
+<script defer src="../static/auto-render.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+renderMathInElement(document.body, {
+  // customised options
+  // • auto-render specific keys, e.g.:
+  delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false},
+      // {left: '\\(', right: '\\)', display: false},
+      // {left: '\\[', right: '\\]', display: true}
+
+      {left: "$$", right: "$$", display: true},
+      {left: "\\(", right: "\\)", display: false},
+      {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+      {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+      {left: "\\begin{align}", right: "\\end{align}", display: true},
+      {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+      {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+      {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+      {left: "\\[", right: "\\]", display: true}
+  ],
+  // • rendering keys, e.g.:
+  throwOnError : false
+});
+});
+</script>
+<script>
+var loader = document.getElementById("loader-wrapper");
+window.addEventListener("load", function(){
+loader.style.display = "none"
+})
+</script>
+<script>
+
+  var model_A = document.getElementById("A");
+  var model_I1 = document.getElementById("I1");
+  var model_I2 = document.getElementById("I2");
+  var model_I3 = document.getElementById("I3");
+  var model_I4 = document.getElementById("I4");
+
+  var des_A = document.getElementById("A-d");
+  var des_I1 = document.getElementById("I1-d");
+  var des_I2 = document.getElementById("I2-d");
+  var des_I3 = document.getElementById("I3-d");
+  var des_I4 = document.getElementById("I4-d");
+
+  var btn_A = document.getElementById("A-btn");
+  var btn_I1 = document.getElementById("I1-btn");
+  var btn_I2 = document.getElementById("I2-btn");
+  var btn_I3 = document.getElementById("I3-btn");
+  var btn_I4 = document.getElementById("I4-btn");
+
+  btn_A.onclick = function () {
+    model_A.style.display = "block";
+    des_A.style.display = "block";
+    model_I1.style.display = "none";
+    des_I1.style.display = "none";
+    model_I2.style.display = "none";
+    des_I2.style.display = "none";
+    model_I3.style.display = "none";
+    des_I3.style.display = "none";
+    model_I4.style.display = "none";
+    des_I4.style.display = "none";
+  }
+
+  btn_I1.onclick = function () {
+    model_A.style.display = "none";
+    des_A.style.display = "none";
+    model_I1.style.display = "block";
+    des_I1.style.display = "block";
+    model_I2.style.display = "none";
+    des_I2.style.display = "none";
+    model_I3.style.display = "none";
+    des_I3.style.display = "none";
+    model_I4.style.display = "none";
+    des_I4.style.display = "none";
+  }
+
+  btn_I2.onclick = function () {
+    model_A.style.display = "none";
+    des_A.style.display = "none";
+    model_I1.style.display = "none";
+    des_I1.style.display = "none";
+    model_I2.style.display = "block";
+    des_I2.style.display = "block";
+    model_I3.style.display = "none";
+    des_I3.style.display = "none";
+    model_I4.style.display = "none";
+    des_I4.style.display = "none";
+  }
+
+  btn_I3.onclick = function () {
+    model_A.style.display = "none";
+    des_A.style.display = "none";
+    model_I1.style.display = "none";
+    des_I1.style.display = "none";
+    model_I2.style.display = "none";
+    des_I2.style.display = "none";
+    model_I3.style.display = "block";
+    des_I3.style.display = "block";
+    model_I4.style.display = "none";
+    des_I4.style.display = "none";
+  }
+  btn_I4.onclick = function () {
+    model_A.style.display = "none";
+    des_A.style.display = "none";
+    model_I1.style.display = "none";
+    des_I1.style.display = "none";
+    model_I2.style.display = "none";
+    des_I2.style.display = "none";
+    model_I3.style.display = "none";
+    des_I3.style.display = "none";
+    model_I4.style.display = "block";
+    des_I4.style.display = "block";
+  }
+
+  // slide - A
+  let slideIndex_A = 1;
+  showSlides_A(slideIndex_A);
+
+  function plusSlides_A(n) {
+  showSlides_A(slideIndex_A += n);
+  }
+
+  function currentSlide_A(n) {
+  showSlides_A(slideIndex_A = n);
+  }
+
+  function showSlides_A(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides_A");
+  if (n > slides.length) {slideIndex_A = 1}    
+  if (n < 1) {slideIndex_A = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex_A-1].style.display = "block";  
+  }
+  
+  // slide - I1
+  let slideIndex_I1 = 1;
+  showSlides_I1(slideIndex_I1);
+
+  function plusSlides_I1(n) {
+  showSlides_I1(slideIndex_I1 += n);
+  }
+
+  function currentSlide_I1(n) {
+  showSlides_I1(slideIndex_I1 = n);
+  }
+
+  function showSlides_I1(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides_I1");
+  if (n > slides.length) {slideIndex_I1 = 1}    
+  if (n < 1) {slideIndex_I1 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex_I1-1].style.display = "block";  
+  }
+
+  // slide - I2
+  let slideIndex_I2 = 1;
+  showSlides_I2(slideIndex_I2);
+
+  function plusSlides_I2(n) {
+  showSlides_I2(slideIndex_I2 += n);
+  }
+
+  function currentSlide_I2(n) {
+  showSlides_I2(slideIndex_I2 = n);
+  }
+
+  function showSlides_I2(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides_I2");
+  if (n > slides.length) {slideIndex_I2 = 1}    
+  if (n < 1) {slideIndex_I2 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex_I2-1].style.display = "block";  
+  }
+
+  // slide - I3
+  let slideIndex_I3 = 1;
+  showSlides_I3(slideIndex_I3);
+
+  function plusSlides_I3(n) {
+  showSlides_I3(slideIndex_I3 += n);
+  }
+
+  function currentSlide_I3(n) {
+  showSlides_I3(slideIndex_I3 = n);
+  }
+
+  function showSlides_I3(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides_I3");
+  if (n > slides.length) {slideIndex_I3 = 1}    
+  if (n < 1) {slideIndex_I3 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex_I3-1].style.display = "block";  
+  }
+
+  // slide - I4
+  let slideIndex_I4 = 1;
+  showSlides_I4(slideIndex_I4);
+
+  function plusSlides_I4(n) {
+  showSlides_I4(slideIndex_I4 += n);
+  }
+
+  function currentSlide_I4(n) {
+  showSlides_I4(slideIndex_I4 = n);
+  }
+
+  function showSlides_I4(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides_I4");
+  if (n > slides.length) {slideIndex_I4 = 1}    
+  if (n < 1) {slideIndex_I4 = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  slides[slideIndex_I4-1].style.display = "block";  
+  }
+
+</script>
+</body>
+</html>

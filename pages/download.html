@@ -58,6 +58,15 @@
       -webkit-transition: .333s ease top, .333s ease opacity;
       transition: .333s ease top, .333s ease opacity;
     }
+    .check-label {
+      font-size: 14px;
+      color: #9A8C98;
+      margin: 0;
+      display: block;
+      opacity: 1;
+      margin-top:1vw;
+      margin-bottom:.5vw;
+    }
     .form-control {
       border-radius: 0;
       border-color: #C9ADA7;
@@ -68,6 +77,9 @@
     .form-control:focus {
       box-shadow: none;
       border-color: #9A8C98;
+    }
+    .form-check {
+      margin-right:.2vw;
     }
     .js-hide-label {
       opacity: 0; 	
@@ -93,7 +105,7 @@
       color: #9A8C98;
     }
     .thank-block{
-      display: flex;
+      /* display: flex; */
       flex-direction: column;
       padding-top:3vw;
       padding-bottom: 3vw;
@@ -239,11 +251,17 @@
                       </div>                            
                       <div class="form-group">
                           <label class="form-label" for="pi-email">PI's Email</label>
-                          <input type="email" class="form-control" id="pi-email" name="pi-email" placeholder="Your Email" tabindex="2" required>                                 
+                          <input type="email" class="form-control" id="pi-email" name="pi-email" placeholder="PI's Email" tabindex="4" required>                                 
                       </div>
                       <div class="form-group">
                         <label class="form-label" for="affiliation">Affiliation</label>
-                        <input type="text" class="form-control" id="affiliation" name="affiliation" placeholder="Your Email" tabindex="2" required>
+                        <input type="text" class="form-control" id="affiliation" name="affiliation" placeholder="Affiliation" tabindex="5" required>
+                      </div>
+                      <div class="form-group">
+                        <label class="check-label" for="dataset">Select Dataset</label>
+                        <label class="form-check"><input type="checkbox" id="architecture" name="architecture" value="Architecture Design">Architecture Design</input></label>
+                        <label class="form-check"><input type="checkbox" id="interior" name="interior" value="Interior Design">Interior Design</input></label>
+                        <label class="form-check"><input type="checkbox" id="fmri" name="fmri" value="fMRI Data">fMRI Data</input></label>
                       </div>
                       <div class="text-center">
                         <button type="submit" class="btn btn-start-order">Submit</button>
@@ -253,7 +271,7 @@
           </div>
         </div>
 
-        <div class="thank-block" id="thank">
+        <div class="thank-block" id="thank" style="display: none;">
           <h1 class="thank-heading">Thank You</h1>
           <svg fill="#9A8C98" xmlns="http://www.w3.org/2000/svg" height="32" width="28" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
         </div>
@@ -418,7 +436,10 @@
               "entry.42438986": $('#req-email').val(),
               "entry.358718244": $('#pi-name').val(),
               "entry.1609973084": $('#pi-email').val(),
-              "entry.1938561407": $('#affiliation').val()
+              "entry.1938561407": $('#affiliation').val(),
+              "entry.385443809": $('#architecture').val(),
+              "entry.385443809": $('#interior').val(),
+              "entry.385443809": $('#fmri').val()
             },
             type: "POST", //因為是要進行insert的動作，故事用POST
             dataType: "JSONP",
@@ -429,6 +450,9 @@
               $('#pi-name').val('')
               $('#pi-email').val('')
               $('#affiliation').val('')
+              $('#architecture').val('')
+              $('#interior').val('')
+              $('#fmri').val('')
               //最後跳轉到感謝的頁面
               thank_block.style.display = "flex";
             }
