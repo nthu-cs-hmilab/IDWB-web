@@ -248,7 +248,7 @@
                       </div>                            
                       <div class="form-group">
                           <label class="form-label" for="pi-name">PI's Name</label>
-                          <input type="text" class="form-control" id="pi-name" name="pi-name" placeholder="Subject" tabindex="3">
+                          <input type="text" class="form-control" id="pi-name" name="pi-name" placeholder="PI's Name" tabindex="3">
                       </div>                            
                       <div class="form-group">
                           <label class="form-label" for="pi-email">PI's Email</label>
@@ -258,12 +258,12 @@
                         <label class="form-label" for="affiliation">Affiliation</label>
                         <input type="text" class="form-control" id="affiliation" name="affiliation" placeholder="Affiliation" tabindex="5" required>
                       </div>
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label class="check-label" for="dataset">Select Dataset</label>
                         <label class="form-check"><input type="checkbox" id="architecture" name="architecture" value="Architecture Design">Architecture Design</input></label>
                         <label class="form-check"><input type="checkbox" id="interior" name="interior" value="Interior Design">Interior Design</input></label>
                         <label class="form-check"><input type="checkbox" id="fmri" name="fmri" value="fMRI Data">fMRI Data</input></label>
-                      </div>
+                      </div> -->
                       <div class="text-center">
                         <button type="submit" class="btn btn-start-order">Submit</button>
                       </div>
@@ -437,10 +437,10 @@
               "entry.42438986": $('#req-email').val(),
               "entry.358718244": $('#pi-name').val(),
               "entry.1609973084": $('#pi-email').val(),
-              "entry.1938561407": $('#affiliation').val(),
-              "entry.385443809": $('#architecture').val(),
-              "entry.385443809": $('#interior').val(),
-              "entry.385443809": $('#fmri').val()
+              "entry.1938561407": $('#affiliation').val()
+              // "entry.385443809": $('#architecture').val(),
+              // "entry.385443809": $('#interior').val(),
+              // "entry.385443809": $('#fmri').val()
             },
             type: "POST", //因為是要進行insert的動作，故事用POST
             dataType: "JSONP",
@@ -451,9 +451,9 @@
               $('#pi-name').val('')
               $('#pi-email').val('')
               $('#affiliation').val('')
-              $('#architecture').val('')
-              $('#interior').val('')
-              $('#fmri').val('')
+              // $('#architecture').val('')
+              // $('#interior').val('')
+              // $('#fmri').val('')
               //最後跳轉到感謝的頁面
               thank_block.style.display = "flex";
             }
