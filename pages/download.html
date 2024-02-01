@@ -32,7 +32,7 @@
     <link href="../static/card.css" rel="stylesheet">
 
     <!-- <script src="../static/jquery-1.10.2.js"></script> -->
-    <script src="../static/jquery-3.2.1.min.js"></script>
+    <script src="../static/jquery-3.7.1.min.js"></script>
     <!--<script src="{{ url_for('static', filename = 'footer_icon.js') }}"></script>-->
     <script src="../static/navbar.js" defer></script>
     <script src="../static/education.js" defer></script>
@@ -239,6 +239,9 @@
         </p>
 
         <h1 class="des-heading1" id="heading5">Apply Form</h1>
+        <!-- <div class="row" style="justify-content: center;">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdEm9VShPfbw7_5D_-Cr5BiwOCl1glj0M9EycWpdpuIrpU-aQ/viewform?embedded=true&hl=en" width="640" height="1178" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div> -->
         <div class="container">
           <div class="row" style="justify-content: center;">
               <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3">
@@ -427,7 +430,8 @@
               }
 
           });
-      } 
+        } 
+      });
 
       var thank_block = document.getElementById("thank");
 
@@ -441,6 +445,9 @@
             // url為Google Form按下submit的aciotn
             url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdEm9VShPfbw7_5D_-Cr5BiwOCl1glj0M9EycWpdpuIrpU-aQ/formResponse",
             crossDomain: true,//解決跨網域CORS的問題
+            // xhrFields: {
+            //   withCredentials: true //默认情况下，标准的跨域请求是不会发送cookie的
+            // },
             data: {// entry.xxxxx 這些需要填寫您表單裡面的值，與其相互對應
               "entry.1304358899": $('#req-name').val(),
               "entry.42438986": $('#req-email').val(),
@@ -465,7 +472,6 @@
           });
         }
       });
-  });
   </script>
   </body>
 </html>
