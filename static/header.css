@@ -61,8 +61,8 @@
     scroll-snap-align:center;
 }
 .nav_content:hover {
-    height:46vh;
-    padding-bottom:36vh;
+    height:10vh;
+    /* padding-bottom:36vh; */
 }
 /* Navbar*/
 nav {
