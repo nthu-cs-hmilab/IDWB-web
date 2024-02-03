@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="National Tsing Hua University Brain Space Machine">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../static/images/hmi.png"/>
+    <!-- <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/> -->
+    <!-- 內文<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <!-- Navbar<script src="//code.jquery.com/jquery-1.10.2.js"></script>-->
+
+
+    <!-- Bootstrap CSS -->
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    
+    <link href="../static/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/style.css" rel="stylesheet">
+    <link href="../static/header.css" rel="stylesheet">
+    <link href="../static/footer.css" rel="stylesheet">
+    <link href="../static/index.css" rel="stylesheet">
+    <link href="../static/sidebar.css" rel="stylesheet">
+    <link href="../static/team.css" rel="stylesheet">
+    <link href="../static/book.css" rel="stylesheet">
+    <link href="../static/banner.css" rel="stylesheet">
+    <link href="../static/education.css" rel="stylesheet">
+    <link href="../static/tab.css" rel="stylesheet">
+    <link href="../static/loading.min.css" rel="stylesheet">
+    <link href="../static/card.css" rel="stylesheet">
+
+    <!-- <script src="../static/jquery-1.10.2.js"></script> -->
+    <script src="../static/jquery-3.7.1.min.js"></script>
+    <!--<script src="{{ url_for('static', filename = 'footer_icon.js') }}"></script>-->
+    <script src="../static/navbar.js" defer></script>
+    <script src="../static/education.js" defer></script>
+    <script src="../static/index.js" defer></script>
+    <script src="../static/slideshow.js" defer></script>
+    <script src="../static/tab.js" defer></script>
+    <script src="../static/canva.js" defer></script>
+
+    <title>Introduction | IDWB</title>
+    
+  </head>
+
+  <body>
+    <style>
+      textarea {
+      resize: none;
+    }
+    .form-label {
+      font-size: 12px;
+      color: #9A8C98;
+      margin: 0;
+      display: block;
+      opacity: 1;
+      -webkit-transition: .333s ease top, .333s ease opacity;
+      transition: .333s ease top, .333s ease opacity;
+    }
+    .check-label {
+      font-size: 14px;
+      color: #9A8C98;
+      margin: 0;
+      display: block;
+      opacity: 1;
+      margin-top:1vw;
+      margin-bottom:.5vw;
+    }
+    .form-control {
+      border-radius: 0;
+      border-color: #C9ADA7;
+        border-width: 0 0 2px 0;
+        border-style: none none solid none;
+        box-shadow: none;
+    }
+    .form-control:focus {
+      box-shadow: none;
+      border-color: #9A8C98;
+    }
+    .form-check {
+      margin-right:.2vw;
+    }
+    .js-hide-label {
+      opacity: 0; 	
+    }
+    .js-unhighlight-label {
+      color: #999 
+    }
+    .btn-start-order {
+      background: 0 0 #ffffff;
+        border: 1px solid #22223B;
+        border-radius: 3px;
+        color: #22223B;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+        line-height: inherit;
+        margin: 30px 0;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        transition: all 0.25s ease 0s;
+    }
+    .btn-start-order:hover,.btn-start-order:active, .btn-start-order:focus {
+      border-color: #9A8C98;
+      color: #9A8C98;
+    }
+    .thank-block{
+      /* display: flex; */
+      flex-direction: column;
+      padding-top:1vw;
+      padding-bottom: 3vw;
+      align-items: center;
+      justify-content: center;
+      color:#9A8C98;
+      display: none;
+    }
+    </style>
+    <!-- loading start -->
+    <style>
+      @media screen and (max-width: 720px) {
+        .loader {
+          width: 100% !important;
+        }
+      }
+
+      #loader-wrapper {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100000;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-color: 	#9A8C98;
+      }
+
+      .loader {
+        color: #FE9901;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .loader-n {
+        border: 2vw solid #F2E9E4;
+        border-top: 2vw solid #4A4E69;
+        border-radius: 50%;
+        width: 10vw;
+        height: 10vw;
+        animation: spin 2s linear infinite;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* .loader img { */
+        /* width: 17vw; */
+        /* margin-top: 25px;
+        margin-bottom: 0px; */
+        /* margin-top:7vw; */
+      /* } */
+    </style>
+
+    <div id="loader-wrapper">
+      <!-- <img style="position: absolute; bottom: 25vh; width:40%" src="https://static.igem.wiki/teams/4336/wiki/loading/loading-trans.gif" alt="Please wait a minute for preparing the website..."> -->
+      <div class="loader-n"></div>
+    </div>
+    <!-- loading end -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top nav_content navbar-fixed-top">
+      <ul class="dropdown">
+          <li class="dropbutton" style="margin-right:5vw;">
+              <a href="./index.html"><img class="index-logo" src="../static/images/hmi.png"></a>
+          </li>
+          <li class="dropbutton">
+              <div class="dropbutton-title"><a href="./intro.html">Introduction</a></div>
+          </li>
+          <li class="dropbutton">
+              <div class="dropbutton-title"><a href="./spaces.html">Spaces Design</a></div>
+          </li>
+          <li class="dropbutton">
+              <div class="dropbutton-title"><a href="./download.html">Download</a></div>
+          </li>
+      </ul>
+    </nav> 
+
+    <!-- banner -->
+    <section class="banner-container">
+      <div class="banner-spaces"></div>
+      <div class="banner-word">
+          <div class="banner-header">Introduction</div>
+          <!-- <div class="banner-para">Avenue ahead to our dream.</div> -->
+      </div>
+    </section>
+
+    <!-- Page Content -->
+    <section class="content">
+      <div class="main-left">
+        <div class="sidebar">
+          <ul>
+            <li><a id="sidebaritem1" href="#heading1">Introduction</a></li>
+            <li><a id="sidebaritem2" href="#heading2">Step 1</a></li>
+            <li><a id="sidebaritem3" href="#heading3">Step 2</a></li>
+            <li><a id="sidebaritem4" href="#heading4">Step 3</a></li>
+            <li><a id="sidebaritem5" href="#heading5">Step 4</a></li>
+          </ul>
+    
+        </div>
+      </div>
+      <div class="main-right" id="effort">
+        <h1 class="des-heading1" id="heading1">Introduction</h1>
+        <p class="des-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor sem ac congue aliquam. Fusce vitae convallis risus, vitae ultrices nulla. Nullam eget dignissim eros. Morbi posuere dictum lacinia. Curabitur convallis massa leo, eget volutpat nisi euismod sit amet. Suspendisse convallis lacus ac arcu molestie gravida. Sed ornare nunc tellus, nec egestas mi suscipit a. Nam consequat pulvinar metus, id cursus nisl lacinia quis. Nam imperdiet bibendum leo, non venenatis mi sagittis et. Proin finibus, enim nec dictum rutrum, tellus dolor accumsan metus, a efficitur odio mauris non nunc.
+        </p>
+
+        <h1 class="des-heading1" id="heading2">Step 1</h1>
+        <p class="des-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor sem ac congue aliquam. Fusce vitae convallis risus, vitae ultrices nulla. Nullam eget dignissim eros. Morbi posuere dictum lacinia. Curabitur convallis massa leo, eget volutpat nisi euismod sit amet. Suspendisse convallis lacus ac arcu molestie gravida. Sed ornare nunc tellus, nec egestas mi suscipit a. Nam consequat pulvinar metus, id cursus nisl lacinia quis. Nam imperdiet bibendum leo, non venenatis mi sagittis et. Proin finibus, enim nec dictum rutrum, tellus dolor accumsan metus, a efficitur odio mauris non nunc. 
+        </p>
+        
+        <h1 class="des-heading1" id="heading3">Step 2</h1>
+        <p class="des-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor sem ac congue aliquam. Fusce vitae convallis risus, vitae ultrices nulla. Nullam eget dignissim eros. Morbi posuere dictum lacinia. Curabitur convallis massa leo, eget volutpat nisi euismod sit amet. Suspendisse convallis lacus ac arcu molestie gravida. Sed ornare nunc tellus, nec egestas mi suscipit a. Nam consequat pulvinar metus, id cursus nisl lacinia quis. Nam imperdiet bibendum leo, non venenatis mi sagittis et. Proin finibus, enim nec dictum rutrum, tellus dolor accumsan metus, a efficitur odio mauris non nunc. 
+        </p>
+        <h1 class="des-heading1" id="heading4">Step 3</h1>
+        <p class="des-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor sem ac congue aliquam. Fusce vitae convallis risus, vitae ultrices nulla. Nullam eget dignissim eros. Morbi posuere dictum lacinia. Curabitur convallis massa leo, eget volutpat nisi euismod sit amet. Suspendisse convallis lacus ac arcu molestie gravida. Sed ornare nunc tellus, nec egestas mi suscipit a. Nam consequat pulvinar metus, id cursus nisl lacinia quis. Nam imperdiet bibendum leo, non venenatis mi sagittis et. Proin finibus, enim nec dictum rutrum, tellus dolor accumsan metus, a efficitur odio mauris non nunc. 
+        </p>
+
+        <h1 class="des-heading1" id="heading5">Step 4</h1>
+        <p class="des-paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor sem ac congue aliquam. Fusce vitae convallis risus, vitae ultrices nulla. Nullam eget dignissim eros. Morbi posuere dictum lacinia. Curabitur convallis massa leo, eget volutpat nisi euismod sit amet. Suspendisse convallis lacus ac arcu molestie gravida. Sed ornare nunc tellus, nec egestas mi suscipit a. Nam consequat pulvinar metus, id cursus nisl lacinia quis. Nam imperdiet bibendum leo, non venenatis mi sagittis et. Proin finibus, enim nec dictum rutrum, tellus dolor accumsan metus, a efficitur odio mauris non nunc. 
+          </p>
+    
+      </div>
+    
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="rows">
+          <div class="footer-row">
+              <div class="social-links">
+                <div class="social-links">
+                  <a target="_blank" href="https://nthu-cs-hmilab.github.io/#"><svg fill=#bbbbbb xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                  <a target="_blank" href="https://sites.google.com/site/bfantasykuo/Home"><svg fill=#bbbbbb xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
+                  <a target="_blank" href="mailto:kuopc@mit.edu "><svg width="45%"fill=#bbbbbb xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 128C0 92.65 28.65 64 64 64H448C483.3 64 512 92.65 512 128V384C512 419.3 483.3 448 448 448H64C28.65 448 0 419.3 0 384V128zM48 128V150.1L220.5 291.7C241.1 308.7 270.9 308.7 291.5 291.7L464 150.1V127.1C464 119.2 456.8 111.1 448 111.1H64C55.16 111.1 48 119.2 48 127.1L48 128zM48 212.2V384C48 392.8 55.16 400 64 400H448C456.8 400 464 392.8 464 384V212.2L322 328.8C283.6 360.3 228.4 360.3 189.1 328.8L48 212.2z"/></svg></a>
+                  <!-- <a target="_blank" href="https://www.youtube.com/channel/UC49LnK5F4nOjvDvBGQngdpg"><svg width="45%"fill=#bbbbbb xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc.<path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg></a> -->
+              </div>
+              </div>
+          </div>
+          <div class="footer-row">
+            <div class="year">
+                <ul>
+                  <li>
+                    <p>National Tsing Hua University Human-Centered Machine Intelligence Lab</p>
+                  </li>
+                  <!-- <li>
+                    <p>The repository used to create this website is available at <a href="https://gitlab.igem.org/templates/wiki-frozen-flask">gitlab.igem.org/templates/wiki-frozen-flask</a>.</p>
+                  </li> -->
+                </ul>
+            </div>
+          </div>
+      </div>
+    </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="../static/bootstrap.bundle.min.js"></script>
+  <script defer src="../static/katex.js"></script>
+  <script defer src="../static/mhchem.min.js"></script>
+  <script defer src="../static/auto-render.min.js"></script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+  renderMathInElement(document.body, {
+    // customised options
+    // • auto-render specific keys, e.g.:
+    delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+        // {left: '\\(', right: '\\)', display: false},
+        // {left: '\\[', right: '\\]', display: true}
+
+        {left: "$$", right: "$$", display: true},
+        {left: "\\(", right: "\\)", display: false},
+        {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+        {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+        {left: "\\begin{align}", right: "\\end{align}", display: true},
+        {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+        {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+        {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+        {left: "\\[", right: "\\]", display: true}
+    ],
+    // • rendering keys, e.g.:
+    throwOnError : false
+  });
+  });
+  </script>
+  <script>
+  var loader = document.getElementById("loader-wrapper");
+  window.addEventListener("load", function(){
+  loader.style.display = "none"
+  })
+  </script>
+  <script>
+    $(window).scroll(function() {
+      var hT1 = $('#heading1').offset().top,
+          hH1 = $('#heading1').outerHeight(),
+          hT2 = $('#heading2').offset().top,
+          hH2 = $('#heading2').outerHeight(),
+          hT3 = $('#heading3').offset().top,
+          hH3 = $('#heading3').outerHeight(),
+          hT4 = $('#heading4').offset().top,
+          hH4 = $('#heading4').outerHeight(),
+          hT5 = $('#heading5').offset().top,
+          hH5 = $('#heading5').outerHeight(),
+          //hT6 = $('#heading6').offset().top,
+          //hH6 = $('#heading6').outerHeight(),
+          wH = $(window).height(),
+          wS = $(this).scrollTop();
+          nav = $('.nav_content').outerHeight();
+          var $nav1 = $("#sidebaritem1");
+          $nav1.toggleClass('scrolled', (wS > (hT1+hH1-3*nav))&&(wS < (hT2+hH2-3*nav)));
+          var $nav2 = $("#sidebaritem2");
+          $nav2.toggleClass('scrolled', (wS > (hT2+hH2-3*nav))&&(wS < (hT3+hH3-3*nav)));
+          var $nav3 = $("#sidebaritem3");
+          $nav3.toggleClass('scrolled', (wS > (hT3+hH3-3*nav))&&(wS < (hT4+hH4-3*nav)));
+          var $nav4 = $("#sidebaritem4");
+          $nav4.toggleClass('scrolled', (wS > (hT4+hH4-3*nav))&&(wS < (hT5+hH5-3*nav)));
+          var $nav5 = $("#sidebaritem5");
+          $nav5.toggleClass('scrolled', (wS > (hT5+hH5-3*nav)));
+          /*var $nav6 = $("#sidebaritem6");
+          $nav6.toggleClass('scrolled', (wS > (hT6+hH6-3*nav)));*/
+      });
+  </script>
+  </body>
+</html>

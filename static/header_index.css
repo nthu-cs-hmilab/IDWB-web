@@ -6,7 +6,7 @@
     
 }
 .nav_background {
-    background-image: url(https://i.pinimg.com/564x/22/cf/b0/22cfb0b30ce1ffd3b7023e6103df3465.jpg);
+    background-image: url(../static/images/A1/entry-1.jpg);
     backdrop-filter:brightness(50%);
     /* filter:brightness(50%); */
     background-size:cover;
